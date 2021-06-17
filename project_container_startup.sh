@@ -1,5 +1,16 @@
 #!/bin/bash
 
+curl https://raw.githubusercontent.com/RAJAGOPALAN-GANGADHARAN/AdCapital-Script-Box/main/adcapital_load_startup.sh -o adcapital_load_startup.sh
+curl https://raw.githubusercontent.com/RAJAGOPALAN-GANGADHARAN/AdCapital-Script-Box/main/adcapital_tomcat_startup.sh -o adcapital_tomcat_startup.sh
+curl https://raw.githubusercontent.com/RAJAGOPALAN-GANGADHARAN/AdCapital-Script-Box/main/appdynamics_container_config.sh -o appdynamics_container_config.sh
+curl https://raw.githubusercontent.com/RAJAGOPALAN-GANGADHARAN/AdCapital-Script-Box/main/appdynamics_container_startup.sh -o appdynamics_container_startup.sh
+
+cp adcapital_load_startup.sh /appdynamics/adcapital_load_startup.sh
+cp adcapital_tomcat_startup.sh /project/adcapital_tomcat_startup.sh
+cp appdynamics_container_config.sh /appdynamics/appdynamics.sh
+cp appdynamics_container_startup.sh /appdynamics/appdynamics_container_startup.sh
+
+
 apt-get install -y git
 
 curl -O https://downloads.gradle.org/distributions/gradle-2.1-bin.zip
