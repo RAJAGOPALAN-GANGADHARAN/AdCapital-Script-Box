@@ -5,10 +5,10 @@ curl https://raw.githubusercontent.com/RAJAGOPALAN-GANGADHARAN/AdCapital-Script-
 curl https://raw.githubusercontent.com/RAJAGOPALAN-GANGADHARAN/AdCapital-Script-Box/main/appdynamics_container_config.sh -o appdynamics_container_config.sh
 curl https://raw.githubusercontent.com/RAJAGOPALAN-GANGADHARAN/AdCapital-Script-Box/main/appdynamics_container_startup.sh -o appdynamics_container_startup.sh
 
-cp adcapital_load_startup.sh /scripts/adcapital_load_startup.sh
-cp adcapital_tomcat_startup.sh /scripts/adcapital_tomcat_startup.sh
-cp appdynamics_container_config.sh /scripts/appdynamics_container_config.sh
-cp appdynamics_container_startup.sh /scripts/appdynamics_container_startup.sh
+cp adcapital_load_startup.sh /appdynamics/adcapital_load_startup.sh
+cp adcapital_tomcat_startup.sh /appdynamics/adcapital_tomcat_startup.sh
+cp appdynamics_container_config.sh /appdynamics/appdynamics_container_config.sh
+cp appdynamics_container_startup.sh /appdynamics/appdynamics_container_startup.sh
 
 apt-get install -y git
 
