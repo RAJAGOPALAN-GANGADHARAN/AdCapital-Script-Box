@@ -4,8 +4,8 @@ curl https://raw.githubusercontent.com/RAJAGOPALAN-GANGADHARAN/AdCapital-Script-
 curl https://raw.githubusercontent.com/RAJAGOPALAN-GANGADHARAN/AdCapital-Script-Box/main/project_container_startup.sh -o project_container_startup.sh
 
 cp adcapital_load_startup.sh /appdynamics/adcapital_load_startup.sh
-cp adcapital_tomcat_startup.sh /appdynamics/adcapital_tomcat_startup.sh
-cp appdynamics_container_config.sh /appdynamics/appdynamics_container_config.sh
+cp adcapital_tomcat_startup.sh /project/adcapital_tomcat_startup.sh
+cp appdynamics_container_config.sh /appdynamics/appdynamics.sh
 cp project_container_startup.sh /appdynamics/project_container_startup.sh
 
 
