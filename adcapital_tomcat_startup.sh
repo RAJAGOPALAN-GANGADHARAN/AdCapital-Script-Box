@@ -39,6 +39,7 @@ rest)
   java ${APPD_JAVAAGENT} ${APPD_PROPERTIES} ${JMX_OPTS} -cp ${CATALINA_HOME}/bin/bootstrap.jar:${CATALINA_HOME}/bin/tomcat-juli.jar org.apache.catalina.startup.Bootstrap
   ;;
 portal)
+  sed -i 's/port="8080"/port="8082"/' ${CATALINA_HOME}/conf/server.xml
   dockerize -wait tcp://rabbitmq:5672 \
             -wait tcp://rest:8080 \
             -wait-retry-interval ${RETRY} -timeout ${TIMEOUT} || exit $?

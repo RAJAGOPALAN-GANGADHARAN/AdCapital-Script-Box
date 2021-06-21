@@ -35,7 +35,7 @@ if [ -z "${PROCESSOR_HOST}" ]; then
 fi
 
 # Service dependencies
-dockerize -wait tcp://${PORTAL_HOST}:8080 \
+dockerize -wait tcp://${PORTAL_HOST}:8082 \
           -wait tcp://${PROCESSOR_HOST}:8083 \
           -wait-retry-interval ${RETRY} -timeout ${TIMEOUT} || exit $?
 
