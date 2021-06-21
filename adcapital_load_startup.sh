@@ -36,7 +36,7 @@ fi
 
 # Service dependencies
 dockerize -wait tcp://${PORTAL_HOST}:8080 \
-          -wait tcp://${PROCESSOR_HOST}:8080 \
+          -wait tcp://${PROCESSOR_HOST}:8083 \
           -wait-retry-interval ${RETRY} -timeout ${TIMEOUT} || exit $?
 
 ${LOAD_GEN_PROJECT}/bin/AD-Capital-Load ${PORTAL_HOST} ${PROCESSOR_HOST}
