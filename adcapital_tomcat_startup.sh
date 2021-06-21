@@ -48,6 +48,7 @@ portal)
   java ${APPD_JAVAAGENT} ${APPD_PROPERTIES} ${JMX_OPTS} -cp ${CATALINA_HOME}/bin/bootstrap.jar:${CATALINA_HOME}/bin/tomcat-juli.jar org.apache.catalina.startup.Bootstrap
   ;;
 processor)
+  sed -i 's/port="8080"/port="8083"/' ${CATALINA_HOME}/conf/server.xml
   dockerize -wait tcp://adcapitaldb:3306 \
             -wait tcp://rabbitmq:5672 \
             -wait tcp://rest:8080 \
