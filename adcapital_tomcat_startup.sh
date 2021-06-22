@@ -60,6 +60,7 @@ processor)
   java ${APPD_JAVAAGENT} ${APPD_PROPERTIES} ${JMX_OPTS} -cp ${CATALINA_HOME}/bin/bootstrap.jar:${CATALINA_HOME}/bin/tomcat-juli.jar org.apache.catalina.startup.Bootstrap
   ;;
 approval)
+  sed -i 's/port="8080"/port="8084"/' ${CATALINA_HOME}/conf/server.xml
   dockerize -wait tcp://rabbitmq:5672 \
             -wait tcp://rest:8080 \
             -wait-retry-interval ${RETRY} -timeout ${TIMEOUT} || exit $?
@@ -68,6 +69,7 @@ approval)
   java ${APPD_JAVAAGENT} ${APPD_PROPERTIES} ${JMX_OPTS} -jar ${PROJECT}/AD-Capital/QueueReader/build/libs/QueueReader.jar
   ;;
 verification)
+  sed -i 's/port="8080"/port="8081"/' ${CATALINA_HOME}/conf/server.xml
   dockerize -wait tcp://adcapitaldb:3306 \
             -wait tcp://rabbitmq:5672 \
             -wait tcp://rest:8080 \
