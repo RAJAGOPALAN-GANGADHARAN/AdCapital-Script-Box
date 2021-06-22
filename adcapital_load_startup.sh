@@ -17,7 +17,7 @@ GRADLE_HOME=/opt/gradle-2.1
 PATH=$PATH:$GRADLE_HOME/bin
 
 # Clone source repo from GitHub
-git clone https://github.com/Appdynamics/AD-Capital-Load.git
+git clone https://github.com/RAJAGOPALAN-GANGADHARAN/AD-Capital-Load.git
 
 LOAD_GEN_PROJECT=/AD-Capital-Load
 cd ${LOAD_GEN_PROJECT}; gradle distZip
